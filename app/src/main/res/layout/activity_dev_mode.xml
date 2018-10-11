@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btLaunchPB"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/ntailu"
+            android:padding="16dp"
+            android:text="PayBright SDK Demo"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btAutoCap"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_selected_left"
+                    android:fontFamily="@font/ntailu"
+                    android:padding="4dp"
+                    android:text="Auto Capture"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btAuth"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_un_selected_left"
+                    android:fontFamily="@font/ntailu"
+                    android:text="Authorization"
+                    android:textAllCaps="false"
+                    android:textColor="#007AFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btCompleted"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_selected_left"
+                    android:fontFamily="@font/ntailu"
+                    android:text="Completed"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btFailed"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_un_selected_left"
+                    android:fontFamily="@font/ntailu"
+                    android:text="Failed"
+                    android:textAllCaps="false"
+                    android:textColor="#007AFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/ntailu"
+                    android:text="Product:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etPPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="2625"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPCurreny"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="CAD"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="PaymentGatewayTesting - #4682855809085"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="#4682855809085"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPPlanID"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_optional_et"
+                    android:fontFamily="@font/ntailu"
+                    android:hint="Plan ID"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPPlateform"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="sdk"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPReference"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="4682855809085"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="CA"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPShopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="PaymentGatewayTesting"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPUrlCallback"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:singleLine="true"
+                    android:text="https://checkout.shopify.com/services/ping/notify_integration/paybright/19629019"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPUrlCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:singleLine="true"
+                    android:text="https://paymentgatewaytesting.myshopify.com/19629019/checkouts/84044f7a52ff18a84dd1f2b5cd46b387?key=0c4978718a87a00e5ac1456b577b5695"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:singleLine="true"
+                    android:text="https://paymentgatewaytesting.myshopify.com/19629019/checkouts/84044f7a52ff18a84dd1f2b5cd46b387/offsite_gateway_callback"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etAccountID"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:singleLine="true"
+                    android:text="NjOcXFC8cvTPtAwv3TCGFvSamx74HPvTgm1s46CcGENMmbWFUa"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etApiToken"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:singleLine="true"
+                    android:text="9O49jqV5mW5wWvctuk3mjs9WW5A4VgW5wrtRSvaYSHfahaYOBX"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/ntailu"
+                    android:text="Customer Shipping:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etCSAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="270 Rue Olier"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_optional_et"
+                    android:fontFamily="@font/ntailu"
+                    android:hint="Customer Shipping Address 2"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="Chicoutimi"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="Shopify"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="CA"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="James"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="Testhetfield"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="+1-613-987-6543"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSState"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="QC"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCSZip"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="G7G 4J3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/ntailu"
+                    android:text="Customer:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etCEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="cs@paybright.com"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="James"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="Testhetfield"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_optional_et"
+                    android:fontFamily="@font/ntailu"
+                    android:hint="Customer Phone"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/ntailu"
+                    android:text="Customer Billing:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etCBAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="270 Rue Olier"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCBAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_optional_et"
+                    android:fontFamily="@font/ntailu"
+                    android:hint="Customer Billing Address 2"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCBCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="Chicoutimi"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCBCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_optional_et"
+                    android:fontFamily="@font/ntailu"
+                    android:hint="Customer Billing Company"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCBCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="CA"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCBPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="+1-613-987-6543"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCBState"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="QC"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCBZip"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/sides_padding_half"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/ntailu"
+                    android:paddingEnd="@dimen/sides_padding"
+                    android:paddingLeft="@dimen/sides_padding_half"
+                    android:paddingRight="@dimen/sides_padding"
+                    android:paddingStart="@dimen/sides_padding_half"
+                    android:text="G7G 4J3"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sides_padding_half"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/btTest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_selected_left"
+                        android:fontFamily="@font/ntailu"
+                        android:text="Test"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btLive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_un_selected_left"
+                        android:fontFamily="@font/ntailu"
+                        android:text="Live"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btLaunchPB"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/sides_padding"
+        android:layout_marginTop="@dimen/sides_padding_half"
+        android:background="@drawable/bg_selected_left"
+        android:fontFamily="@font/ntailu"
+        android:text="Launch Paybright"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>
