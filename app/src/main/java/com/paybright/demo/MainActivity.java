@@ -8,7 +8,9 @@ package com.paybright.demo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import android.view.View;
 import android.widget.EditText;
 
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements PBWebViewDelegate
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         AppDelegate.application();
 

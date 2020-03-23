@@ -8,9 +8,9 @@ package com.paybright.demo;
 
 import com.paybright.sdk.PBConfig;
 
-public class AppDelegate {
+class AppDelegate {
 
-    public static void application() {
+    static void application() {
 
         PBConfig.getInstance().initialize(PBConfig.PBEnvironment.Production,
                 "NjOcXFC8cvTPtAwv3TCGFvSamx74HPvTgm1s46CcGENMmbWFUa",

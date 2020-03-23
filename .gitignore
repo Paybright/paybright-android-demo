@@ -1,0 +1,10 @@
+/.gradle/
+/.idea/
+/build/
+/local.properties
+*.iml
+/.gradle/4.6/
+/.gradle/buildOutputCleanup/
+/.idea/libraries/
+local.properties
+local.properties

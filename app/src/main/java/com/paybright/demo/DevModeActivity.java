@@ -9,11 +9,12 @@ package com.paybright.demo;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatEditText;
+
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
 import com.paybright.sdk.PBConfig;
 import com.paybright.sdk.PBCustomer;
@@ -28,9 +29,9 @@ public class DevModeActivity extends AppCompatActivity implements View.OnClickLi
 
     private int btnTapResponse = 1, btnTapEnvironment = 1, btnTapAuth = 1;
 
-    private Button btAutoCap, btAuth, btCompleted, btFailed, btTest, btLive;
+    private AppCompatButton btAutoCap, btAuth, btCompleted, btFailed, btTest, btLive;
 
-    private EditText etApiToken, etAccountID, etPPrice, etPCurreny, etPDesc, etPInvoice, etPPlanID, etPPlateform,
+    private AppCompatEditText etApiToken, etAccountID, etPPrice, etPCurrency, etPDesc, etPInvoice, etPPlanID, etPPlateform,
             etPReference, etPCountry, etPShopName, etPUrlCallback, etPUrlCancel, etPComplete,
             etCSAddress1, etCSAddress2, etCSCity, etCSCompany, etCSCountry, etCSFirstName,
             etCSLastName, etCSPhone, etCSState, etCSZip, etCEmail, etCFirstName, etCLastName,
@@ -60,7 +61,7 @@ public class DevModeActivity extends AppCompatActivity implements View.OnClickLi
 
         etPPrice = findViewById(R.id.etPPrice);
 
-        etPCurreny = findViewById(R.id.etPCurreny);
+        etPCurrency = findViewById(R.id.etPCurrency);
 
         etPDesc = findViewById(R.id.etPDesc);
 
@@ -359,7 +360,7 @@ public class DevModeActivity extends AppCompatActivity implements View.OnClickLi
 
         PBProduct productObj = new PBProduct(
                 Double.valueOf(etPPrice.getText().toString()),
-                etPCurreny.getText().toString(),
+                etPCurrency.getText().toString(),
                 etPDesc.getText().toString(),
                 etPInvoice.getText().toString(),
                 etPPlanID.getText().toString().isEmpty() ? null : etPPlanID.getText().toString(),
